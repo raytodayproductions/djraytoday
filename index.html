@@ -183,7 +183,8 @@
             position:relative;
             min-height:60vh;
             display:flex;
-            align-items:flex-end;
+            flex-direction:column;
+            justify-content:flex-end;
             overflow:hidden;
             border-radius:var(--radius)
         }
@@ -207,7 +208,18 @@
         .party .inner {
             position:relative;
             z-index:1;
-            padding:323px
+            padding:32px;
+            box-sizing:border-box;
+            width:100%
+        }
+
+        .party p {
+            max-width:520px
+        }
+
+        @media(max-width:600px){
+            .party{min-height:50vh}
+            .party .inner{padding:20px}
         }
 
         /* GRID CARDS */
